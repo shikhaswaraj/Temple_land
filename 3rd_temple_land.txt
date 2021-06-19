@@ -1,0 +1,15 @@
+t=int(input())
+for i in range(t):
+    n=int(input())
+    a=list(map(int,input().split()))
+    ad = 0
+    c = 0
+    for i in range(n-1):
+        if(abs(a[i+1]-a[i])!=1):
+            ad+=1
+    if((a[0]==1) and (a[n-1]==1)):
+        c=1
+    if(ad==0 and c==1):
+        print("yes")
+    else:
+        print("no")
